@@ -20,6 +20,6 @@ import {reactive} from "vue";
 
 const linkItem = reactive([
   {title: "Home", link: "home"},
-  {title: "Home", link: "home"},
+  {title: "Cadastrar", link: "register"},
 ])
 </script>
