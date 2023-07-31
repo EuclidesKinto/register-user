@@ -18,9 +18,9 @@
                   </div>
                 </div>
                 <div class="flex items-center mt-4 md:mt-0 md:ml-3 lg:ml-0">
-                  <div class="inline-flex ml-1.5 items-start justify-start px-3 py-3 bg-green-700 hover:bg-green-600 focus:outline-none rounded">
-                    <p class="text-sm font-medium leading-none text-white">Pesquisar</p>
-                  </div>
+                  <button class="inline-flex ml-1.5 items-start justify-start px-3 py-3 bg-green-700 hover:bg-green-600 focus:outline-none rounded">
+                    <span class="text-sm font-medium leading-none text-white">Pesquisar</span>
+                  </button>
                 </div>
 
               <div class="flex items-center mt-4 md:mt-0 md:ml-5 lg:ml-16">
@@ -67,11 +67,11 @@
                               class="bg-blue-100 mr-3 hover:bg-blue-200 py-1 px-2 rounded text-xs leading-3 text-blue-500">
                     Show
                   </RouterLink>
-                  <button
+                  <p
                       @click="removeUser(user)"
-                      class="bg-red-100 mr-3 hover:bg-red-200 py-1 px-2 rounded text-xs leading-3 text-red-500">
+                      class="cursor-pointer bg-red-100 mr-3 hover:bg-red-200 py-1 px-2 rounded text-xs leading-3 text-red-500">
                     Deletar
-                  </button>
+                  </p>
                 </div>
               </td>
             </tr>

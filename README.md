@@ -1,7 +1,56 @@
-# Vue 3 + Vite
+# FrontEnd
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## Objetivo
 
-## Recommended IDE Setup
+O objetivo deste exercício é avaliar se o desenvolvedor tem conhecimento dos padrões de desenvolvimento Web, no que diz 
+respeito a construção de layout, componentização, comunicação assíncrona e gerenciamento de estado.
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Descrição
+
+Construir uma tela de cadastro de pessoas, com os seguintes campos:
+
+- Nome Completo
+- Documento
+- Email
+- Telefone
+- CEP
+- Logradouro
+- Número
+- Complemento (não obrigatório o preenchimento)
+- Bairro
+- Estado
+- Cidade
+
+Gravar os dados do formulário em uma store usando vuex e criar uma segunda tela onde irá listar o Nome, Documento, 
+Email e Telefone recuperados da store.
+
+**Exemplo: Tela da Listagem de Usuários**
+![image](https://github.com/EuclidesKinto/api-financas/assets/57235071/aadaf030-45c5-488c-bab8-ccaac67f2d65)
+
+
+**Exemplo: Tela da Cadastro de Usuários**
+
+![image](https://github.com/EuclidesKinto/api-financas/assets/57235071/71187f6d-78ce-4091-bfbb-c66d6cd66378)
+
+Para visualizar as informações de um usuário específico,  clique no botão -SHOW- na listagem dos usuários.
+
+**Exemplo: Tela de visualização de 1 usuário**
+
+![image](https://github.com/EuclidesKinto/api-financas/assets/57235071/cfe19d96-859f-4bc5-bfdd-9e0b469565d6)
+
+
+### Assista ao video
+[![image](https://github.com/EuclidesKinto/api-financas/assets/57235071/10a368e2-ee80-4215-bec0-c34d7cf7ace9)](https://youtu.be/_6Swpo7kPwU "FrontEnd")
+
+### Exemplo de outros Projetos
+- [API de Filmes com Comentários](https://github.com/EuclidesKinto/movie_api).
+- [Construção de um ADMIN com ACL(Access Control List)](https://github.com/EuclidesKinto/filament-acl).
+- [4 projetos com Vue3](https://github.com/EuclidesKinto/vue-projects).
+- [Componentes Blade - Laravel](https://github.com/EuclidesKinto/components).
+- [Conversor de Moedas com Vue3](https://github.com/EuclidesKinto/conversor-moedas).
+- [Projeto Site UXDesign - Trabalho da Faculdade](https://github.com/EuclidesKinto/trabalho-ux-html).
+- [Projeto em Nuxtjs](https://github.com/EuclidesKinto/lu_estilo_front).
+- [Laravel(PHP) e Front com VUE3](https://github.com/EuclidesKinto/teste_back_front).
+- [API de finanças com Golang](https://github.com/EuclidesKinto/api-financas).
+- [API em Golang](https://github.com/EuclidesKinto/backend_api).
+- [API com GIN em Golang](https://github.com/EuclidesKinto/golang-gin-01).
