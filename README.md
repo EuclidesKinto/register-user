@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-O objetivo deste exercício é avaliar se o desenvolvedor tem conhecimento dos padrões de desenvolvimento Web, no que diz 
+O objetivo deste exercício é avaliar se o desenvolvedor tem conhecimento dos padrões de desenvolvimento Web, no que diz
 respeito a construção de layout, componentização, comunicação assíncrona e gerenciamento de estado.
 
 ## Descrição
@@ -21,7 +21,7 @@ Construir uma tela de cadastro de pessoas, com os seguintes campos:
 - Estado
 - Cidade
 
-Gravar os dados do formulário em uma store usando vuex e criar uma segunda tela onde irá listar o Nome, Documento, 
+Gravar os dados do formulário em uma store usando vuex e criar uma segunda tela onde irá listar o Nome, Documento,
 Email e Telefone recuperados da store.
 
 **Exemplo: Tela da Listagem de Usuários**
@@ -40,7 +40,7 @@ Para visualizar as informações de um usuário específico,  clique no botão -
 
 
 ### Assista ao video
-[![image](https://github.com/EuclidesKinto/api-financas/assets/57235071/10a368e2-ee80-4215-bec0-c34d7cf7ace9)](https://youtu.be/_6Swpo7kPwU "FrontEnd")
+[![frontend](https://github.com/EuclidesKinto/api-financas/assets/57235071/10a368e2-ee80-4215-bec0-c34d7cf7ace9)](https://www.youtube.com/watch?v=_6Swpo7kPwU "FrontEnd")
 
 ### Exemplo de outros Projetos
 - [API de Filmes com Comentários](https://github.com/EuclidesKinto/movie_api).
