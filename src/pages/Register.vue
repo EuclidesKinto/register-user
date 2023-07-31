@@ -27,8 +27,8 @@
                   :autoFocus="true"
                   @input="validateField"
               />
-              <p  v-if="nameError" class="text-red-500 text-xs">{{ nameError }}</p>
-              <p  v-else class="text-white text-xs">-</p>
+              <p  v-if="nameError" class="text-xs text-red-500">{{ nameError }}</p>
+              <p  v-else class="text-xs text-white">-</p>
             </div>
             <div class="relative z-0 w-full mb-2 group">
               <InputSimple
@@ -38,8 +38,8 @@
                   inputType="email"
                   @input="validateField"
               />
-              <p  v-if="emailError" class="text-red-500 text-xs">{{ emailError }}</p>
-              <p  v-else class="text-white text-xs">-</p>
+              <p  v-if="emailError" class="text-xs text-red-500">{{ emailError }}</p>
+              <p  v-else class="text-xs text-white">-</p>
             </div>
           </div>
 
@@ -53,8 +53,8 @@
                   inputType="text"
                   @input="validateField"
               />
-              <p  v-if="documentError" class="text-red-500 text-xs">{{ documentError }}</p>
-              <p  v-else class="text-white text-xs">-</p>
+              <p  v-if="documentError" class="text-xs text-red-500">{{ documentError }}</p>
+              <p  v-else class="text-xs text-white">-</p>
             </div>
             <div class="relative z-0 w-full mb-2 group">
               <InputSimple
@@ -65,8 +65,8 @@
                   inputType="text"
                   @input="validateField"
               />
-              <p  v-if="phoneError" class="text-red-500 text-xs">{{ phoneError }}</p>
-              <p  v-else class="text-white text-xs">-</p>
+              <p  v-if="phoneError" class="text-xs text-red-500">{{ phoneError }}</p>
+              <p  v-else class="text-xs text-white">-</p>
             </div>
           </div>
 
@@ -80,8 +80,8 @@
                   inputType="text"
                   @blur="buscarCep"
               />
-              <p  v-if="cepError" class="text-red-500 text-xs">{{ cepError }}</p>
-              <p  v-else class="text-white text-xs">-</p>
+              <p  v-if="cepError" class="text-xs text-red-500">{{ cepError }}</p>
+              <p  v-else class="text-xs text-white">-</p>
             </div>
             <div class="relative z-0 w-full mb-2 group">
               <InputSimple
@@ -113,8 +113,8 @@
                   inputType="text"
                   @input="validateField"
               />
-              <p  v-if="numberError" class="text-red-500 text-xs">{{ numberError }}</p>
-              <p  v-else class="text-white text-xs">-</p>
+              <p  v-if="numberError" class="text-xs text-red-500">{{ numberError }}</p>
+              <p  v-else class="text-xs text-white">-</p>
             </div>
           </div>
 
@@ -152,11 +152,11 @@
           </div>
           <hr class="h-[1px] bg-gray-100 my-5" />
           <div class="flex flex-col flex-wrap items-center justify-center w-full px-7 lg:flex-row lg:justify-end md:justify-end gap-x-4 gap-y-4">
-            <router-link  class="cursor-pointer bg-white border-red-700 rounded hover:bg-gray-50 transform duration-300 ease-in-out text-sm font-medium px-6 py-3 text-red-700 border "
+            <router-link  class="px-6 py-3 text-sm font-medium text-red-700 duration-300 ease-in-out transform bg-white border border-red-700 rounded cursor-pointer hover:bg-gray-50 "
                 :to="{name: 'home'}">
               Cancelar
             </router-link>
-            <button type="submit"  class="cursor-pointer  rounded  transform duration-300 ease-in-out text-sm font-medium px-6 py-3 text-white "
+            <button type="submit"  class="px-6 py-3 text-sm font-medium text-white duration-300 ease-in-out transform rounded cursor-pointer "
                     :disabled="(!name || !email || !document || !phone || !number)"
                     :class="(!name || !email || !document || !phone || !number) ? 'bg-gray-500 text-gray-800' : 'bg-indigo-700 hover:bg-indigo-600'"
             >
@@ -220,12 +220,16 @@ const validateField = () => {
 
     if (!document.value) {
       documentError.value = 'O documento é obrigatório.';
-    } else {
+    } else if (document.value.length <= 13) {
+      documentError.value = 'O documento deve ter 11 números.';
+    }else {
       documentError.value = '';
     }
-
+    // '(11) 11111-1111'
     if (!phone.value) {
       phoneError.value = 'O telefone é obrigatório.';
+    } else if (phone.value.length <= 14) {
+      phoneError.value = 'O telefone deve ter 11 números.';
     } else {
       phoneError.value = '';
     }
