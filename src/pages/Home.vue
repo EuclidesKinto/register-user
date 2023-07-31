@@ -8,19 +8,24 @@
               Usuários ({{usersLength}})
             </p>
             <div class="items-center mt-6 md:flex lg:mt-0">
-              <div class="flex items-center">
-                <div class="flex items-center w-64 pl-3 bg-white border border-gray-200 rounded">
-                  <svg class="text-gray-500" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                    <path d="M8.33333 13.1667C11.555 13.1667 14.1667 10.555 14.1667 7.33333C14.1667 4.11167 11.555 1.5 8.33333 1.5C5.11167 1.5 2.5 4.11167 2.5 7.33333C2.5 10.555 5.11167 13.1667 8.33333 13.1667Z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M17.5 17.5L12.5 12.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                  <input type="text" class="py-2.5 pl-1 w-full focus:outline-none text-sm rounded text-gray-600 placeholder-gray-500" placeholder="Search" />
+                <div class="flex items-center">
+                  <div class="flex items-center w-64 pl-3 bg-white border border-gray-200 rounded">
+                    <svg class="text-gray-500" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M8.33333 13.1667C11.555 13.1667 14.1667 10.555 14.1667 7.33333C14.1667 4.11167 11.555 1.5 8.33333 1.5C5.11167 1.5 2.5 4.11167 2.5 7.33333C2.5 10.555 5.11167 13.1667 8.33333 13.1667Z" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M17.5 17.5L12.5 12.5" stroke="currentColor" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                    <input type="text" class="py-2.5 pl-1 w-full focus:outline-none text-sm rounded text-gray-600 placeholder-gray-500" placeholder="Search" />
+                  </div>
                 </div>
-              </div>
-              <div class="flex items-center mt-4 md:mt-0 md:ml-3 lg:ml-0">
+                <div class="flex items-center mt-4 md:mt-0 md:ml-3 lg:ml-0">
+                  <div class="inline-flex ml-1.5 items-start justify-start px-3 py-3 bg-green-700 hover:bg-green-600 focus:outline-none rounded">
+                    <p class="text-sm font-medium leading-none text-white">Pesquisar</p>
+                  </div>
+                </div>
 
-                <router-link to="/" class="inline-flex ml-1.5 items-start justify-start px-6 py-3 bg-green-700 hover:bg-green-600 focus:outline-none rounded">
-                  <p class="text-sm font-medium leading-none text-white">Pesquisar</p>
+              <div class="flex items-center mt-4 md:mt-0 md:ml-5 lg:ml-16">
+                <router-link to="/cadastro" class="inline-flex ml-1.5 items-start justify-start px-6 py-3 bg-blue-700 hover:bg-blue-600 focus:outline-none rounded">
+                  <p class="text-sm font-medium leading-none text-white">Adicionar</p>
                 </router-link>
               </div>
             </div>
@@ -58,9 +63,9 @@
               </td>
               <td class="">
                 <div class="flex items-center justify-center">
-                  <RouterLink to="/"
+                  <RouterLink :to="{name: 'show', params: {id: user.id}}"
                               class="bg-blue-100 mr-3 hover:bg-blue-200 py-1 px-2 rounded text-xs leading-3 text-blue-500">
-                    Editar
+                    Show
                   </RouterLink>
                   <button
                       @click="removeUser(user)"
