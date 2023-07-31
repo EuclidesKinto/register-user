@@ -11,6 +11,11 @@ const routes = [
         name: 'register',
         component: () => import('./pages/Register.vue')
     },
+    {
+        path: '/show/user/:id',
+        name: 'show',
+        component: () => import('./pages/Show.vue')
+    },
 ]
 const router = createRouter({
     history: createWebHistory(),

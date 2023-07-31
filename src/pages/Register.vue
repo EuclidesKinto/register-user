@@ -171,7 +171,7 @@
 </template>
 
 <script setup>
-import {ref, watch} from "vue";
+import {computed, onMounted, ref, watch} from "vue";
 import {useStore} from "vuex";
 import { useRouter } from "vue-router";
 import axios from "axios";
@@ -238,6 +238,7 @@ const validateField = () => {
 
 };
 
+
 const addUser =  () => {
   validateField();
   try {
@@ -255,7 +256,6 @@ const addUser =  () => {
       city: city.value
     }
     store.commit('addUser', user)
-    console.log('2')
     name.value = "";
     document.value = "";
     email.value = "";
@@ -267,7 +267,6 @@ const addUser =  () => {
     neighborhood.value = "";
     state.value = "";
     city.value = "";
-    alert("Pessoa cadastrada com sucesso!");
     router.push({ name: "home" });
   } catch (e) {
     alert("Erro ao cadastrar pessoa");
