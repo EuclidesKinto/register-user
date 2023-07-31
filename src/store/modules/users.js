@@ -2,11 +2,17 @@
 export default {
     state: {
         users: [],
-        nextUserId: 1
+        nextUserId: 1,
+
     },
     getters: {
         getAllUsers: (state) => state.users,
         getTotalUsers: (state) => state.users.length,
+        getUserById: (state) => (id) => {
+            const users = JSON.parse(localStorage.getItem("users")) || [];
+            return users.find((user) => user.id === +id);
+        },
+
     },
     mutations: {
         addUser(state, user) {
@@ -25,12 +31,16 @@ export default {
         setUsers(state, users) {
             state.users = users;
             console.log(users)
-        },
+        }
     },
     actions: {
         async initializeState({ commit }) {
             const users = JSON.parse(localStorage.getItem("users")) || [];
             commit("setUsers", users);
         },
+        async getUserById({ state, getters }, id) {
+
+        }
+
     },
 };
