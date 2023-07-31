@@ -39,8 +39,8 @@ Para visualizar as informações de um usuário específico,  clique no botão -
 ![image](https://github.com/EuclidesKinto/api-financas/assets/57235071/cfe19d96-859f-4bc5-bfdd-9e0b469565d6)
 
 
-### Assista ao video
-[![frontend](https://github.com/EuclidesKinto/api-financas/assets/57235071/10a368e2-ee80-4215-bec0-c34d7cf7ace9)](https://www.youtube.com/watch?v=_6Swpo7kPwU "FrontEnd")
+### Assista ao video clicando aqui: [Assistir Video](https://www.youtube.com/watch?v=_6Swpo7kPwU )
+![image](https://github.com/EuclidesKinto/api-financas/assets/57235071/10a368e2-ee80-4215-bec0-c34d7cf7ace9)
 
 ### Exemplo de outros Projetos
 - [API de Filmes com Comentários](https://github.com/EuclidesKinto/movie_api).
